@@ -1,4 +1,4 @@
-package com.mybatistest.superm;
+package com.xhx.mybatisplustest.superm;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 

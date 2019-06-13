@@ -1,4 +1,4 @@
-package com.mybatistest.entity;
+package com.xhx.mybatisplustest.entity;
 
 import com.baomidou.mybatisplus.annotation.KeySequence;
 import com.baomidou.mybatisplus.extension.activerecord.Model;

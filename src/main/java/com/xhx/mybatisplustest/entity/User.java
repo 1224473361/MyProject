@@ -1,4 +1,4 @@
-package com.mybatistest.entity;
+package com.xhx.mybatisplustest.entity;
 
 import java.io.Serializable;
 import java.util.Date;

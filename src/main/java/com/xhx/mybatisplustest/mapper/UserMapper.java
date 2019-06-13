@@ -1,19 +1,21 @@
-package com.mybatistest.mapper;
+package com.xhx.mybatisplustest.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.mybatistest.entity.User;
-import com.mybatistest.superm.SuperMapper;
+import com.xhx.mybatisplustest.entity.User;
+import com.xhx.mybatisplustest.superm.SuperMapper;
 
 /**
  * 
  * @date 2019年6月12日
  * @author lihui
  */
+@Mapper
 public interface UserMapper extends SuperMapper<User> {
 
 	/**

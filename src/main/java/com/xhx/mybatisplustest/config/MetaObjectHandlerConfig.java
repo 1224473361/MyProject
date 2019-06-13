@@ -1,4 +1,4 @@
-package com.mybatistest.config;
+package com.xhx.mybatisplustest.config;
 
 import java.util.Date;
 

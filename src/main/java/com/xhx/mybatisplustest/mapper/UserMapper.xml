@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mybatistest.mapper.UserMapper">
+<mapper namespace="com.xhx.mybatisplustest.mapper.UserMapper">
 
 	<!-- 通用查询结果列 -->
 	<sql id="Base_Column_List">
@@ -11,7 +11,7 @@
 		DELETE FROM MUSER
 	</delete>
 
-	<select id="selectListByWrapper" resultType="com.mybatistest.entity.User">
+	<select id="selectListByWrapper" resultType="com.xhx.mybatisplustest.entity.User">
 		SELECT * FROM MUSER
 		<!-- 判断 wrapper 是否为空 emptyOfWhere -->
 		<where>

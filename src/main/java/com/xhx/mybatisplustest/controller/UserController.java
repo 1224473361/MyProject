@@ -1,4 +1,4 @@
-package com.mybatistest.controller;
+package com.xhx.mybatisplustest.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -15,15 +15,14 @@ import com.baomidou.mybatisplus.extension.api.ApiController;
 import com.baomidou.mybatisplus.extension.api.Assert;
 import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.mybatistest.constant.ErrorCode;
-import com.mybatistest.entity.User;
-import com.mybatistest.entity.enums.PhoneEnum;
-import com.mybatistest.service.IUserService;
+import com.xhx.mybatisplustest.constant.ErrorCode;
+import com.xhx.mybatisplustest.entity.User;
+import com.xhx.mybatisplustest.service.IUserService;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 代码生成器，参考源码测试用例
+ * mybatisPlus 测试
  * 
  * @date 2019年6月12日
  * @author lihui
@@ -56,7 +55,7 @@ public class UserController extends ApiController {
 		// log.info("删除所有:{}", user.delete(null));
 		user.setRole(112L);
 		// user.setTestDate(new Date());
-		user.setPhone(PhoneEnum.CMCC.getValue());
+		user.setPhone("1564");
 		user.insert();
 		log.info("查询插入结果:{}", user.selectById().toString());
 		user.setName("mypsdfsd");
@@ -100,7 +99,7 @@ public class UserController extends ApiController {
 	@RequestMapping("test3")
 	public User test3() {
 		User user = new User(6642398L, "往往" + new Random().nextInt(), 1, 3L);
-		user.setPhone(PhoneEnum.CUCC.getValue());
+		user.setPhone("4657");
 		boolean f = userService.saveOrUpdate(user);
 		log.info("插入更新结果：{}", f);
 		return userService.getById(user.getId());

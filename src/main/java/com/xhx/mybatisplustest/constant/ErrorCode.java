@@ -1,4 +1,4 @@
-package com.mybatistest.constant;
+package com.xhx.mybatisplustest.constant;
 
 import com.baomidou.mybatisplus.extension.api.IErrorCode;
 

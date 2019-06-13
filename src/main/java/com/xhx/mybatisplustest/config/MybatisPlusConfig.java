@@ -1,4 +1,4 @@
-package com.mybatistest.config;
+package com.xhx.mybatisplustest.config;
 
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.context.annotation.Bean;

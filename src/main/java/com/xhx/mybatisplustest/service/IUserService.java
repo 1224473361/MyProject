@@ -1,10 +1,10 @@
-package com.mybatistest.service;
+package com.xhx.mybatisplustest.service;
 
 import java.util.List;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.mybatistest.entity.User;
+import com.xhx.mybatisplustest.entity.User;
 
 /**
  * 

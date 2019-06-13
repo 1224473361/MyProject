@@ -2,18 +2,12 @@
 <configuration>
 	<!--日志级别以及优先级排序: OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
 	<!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径 -->
-	<property name="LOG_HOME" value="/data/logs/tomcat" />
-	<property name="AppName" value="oa" />
+	<property name="LOG_HOME" value="./logs/" />
+	<property name="AppName" value="MyProject" />
 	<!-- 控制台输出 -->
-	<appender name="STDOUT"
-		class="ch.qos.logback.core.ConsoleAppender">
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
-			<!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度,%logger：日志输出者的名字，%msg：日志消息，%n是换行符 -->
-			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level
-				%logger{50}-%msg %n</pattern>
-			<!-- %m输出的信息, %p日志级别, %t线程名, %d日期, %c类的全名, %i索引, %l日志级别 -->
-			<!--<pattern>[%d{yyyy-MM-dd'T'HH:mm:ss.sss'Z'}] [%C] [%t] [%L] [%-5p] 
-				%m%n</pattern> -->
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}-%msg %n</pattern>
 		</encoder>
 	</appender>
 
@@ -21,13 +15,10 @@
 	<appender name="FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<!-- 设置按尺寸和时间（同时满足）分割 -->
-		<rollingPolicy
-			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
 			<!-- rollover daily -->
 			<fileNamePattern>${LOG_HOME}/${AppName}/log.%d{yyyy-MM-dd}.%i.log
 			</fileNamePattern>
-			<!-- each file should be at most 3GB, keep 60 days worth of history,but 
-				at most 30GB -->
 			<maxFileSize>3GB</maxFileSize>
 			<maxHistory>60</maxHistory>
 			<totalSizeCap>30GB</totalSizeCap>
@@ -44,6 +35,6 @@
 	</root>
 	
 	<!-- 打印mybatis sql日志 -->
-	<logger name="com.mybatistest" level="DEBUG"></logger>
+	<logger name="com" level="DEBUG"></logger>
 	
 </configuration>

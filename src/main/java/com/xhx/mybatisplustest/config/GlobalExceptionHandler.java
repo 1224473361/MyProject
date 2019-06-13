@@ -1,4 +1,4 @@
-package com.mybatistest.config;
+package com.xhx.mybatisplustest.config;
 
 import com.baomidou.mybatisplus.extension.api.IErrorCode;
 import com.baomidou.mybatisplus.extension.api.R;
