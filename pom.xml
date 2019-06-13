@@ -42,7 +42,7 @@
 			<artifactId>mybatis-plus-boot-starter</artifactId>
 			<version>${mybatis-plus-boot-starter.version}</version>
 		</dependency>
-		<!-- mybatis-plus end -->
+		<!-- lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -58,4 +58,12 @@
 		</plugins>
 	</build>
 
+	<repositories>
+		<repository>
+			<id>aliyun-milestones</id>
+			<name>aliyun Milestones</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
+	
 </project>
