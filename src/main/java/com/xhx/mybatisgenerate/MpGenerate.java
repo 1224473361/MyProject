@@ -1,4 +1,4 @@
-package com.xhx.mybatisgenerate;
+﻿package com.xhx.mybatisgenerate;
 
 import org.junit.Test;
 
@@ -21,9 +21,9 @@ public class MpGenerate {
 
 	private static final String PACKAGE_NAME = "com.mybatistest";
 
-	private static final String DB_URL = "jdbc:oracle:thin:@10.10.100.230:1521:orcl";
+	private static final String DB_URL = "jdbc:oracle:thin:@10.10.100.:1521:orcl";
 	private static final String USER_NAME = "oa";
-	private static final String USER_PASS = "oa";
+	private static final String USER_PASS = "";
 	private static final String DRIVER_NAME = "oracle.jdbc.OracleDriver";
 
 	private static final String OUT_DIR = "D:\\\\codeGen";
