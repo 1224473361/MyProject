@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Started 小灰熊
 
 ### Reference Documentation
 For further reference, please consider the following sections:
