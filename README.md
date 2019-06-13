@@ -8,6 +8,8 @@
 * [Common 组件](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/common)
 * [动态比较算法](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/comparisons)
 * [poi](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/poi)
-* [RestTemplate 例子](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/restclient)
+* [RestTemplate demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/restclient)
+* [aysnc demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/aysnc)
+
 
 
