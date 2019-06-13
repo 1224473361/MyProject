@@ -1,16 +1,16 @@
-# Getting Started 小灰熊
+# Author 小灰熊
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### 导航
+阐述项目结构:
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
+* [Mybatis-plus demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/mybatisplustest)
+* [Mybatis-plus Generater](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/mybatisgenerate)
+* [Common 组件](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/common)
+* [动态比较算法](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/comparisons)
+* [poi](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/poi)
 
-### Guides
-The following guides illustrate how to use some features concretely:
 
-* [Building a RESTful Web Service with Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/)
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 
-我也不知道
+
+
+
