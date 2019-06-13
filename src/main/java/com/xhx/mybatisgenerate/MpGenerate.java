@@ -1,6 +1,6 @@
 package com.xhx.mybatisgenerate;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.generator.config.GlobalConfig;
