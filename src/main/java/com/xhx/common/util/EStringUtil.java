@@ -56,16 +56,27 @@ public class EStringUtil {
 	}
 
 	/**
-	 * 获取object对应的string
+	 * 获取object对应的string,null作为o为空的返回
 	 * 
-	 * @param m
-	 * @param key
+	 * @param o
 	 * @return
 	 */
 	public static String getStringByObject(Object o) {
+		return getStringByObjectAndDefault(o, null);
+	}
+
+	/**
+	 * 获取object对应的string,defaultv作为o为空的返回
+	 * 
+	 * @param o
+	 * @param defaultv
+	 * @return
+	 */
+	public static String getStringByObjectAndDefault(Object o, String defaultv) {
 		if (stringIsNull(o)) {
 			return null;
 		}
 		return o.toString();
 	}
+
 }
