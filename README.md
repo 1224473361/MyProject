@@ -10,7 +10,7 @@
 >5. [poi](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/poi)
 >6. [RestTemplate demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/restclient)
 >7. [aysnc demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/aysnc)
->8. [stream demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/stream)
-
+>8. [stream demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/steam)
+			      
 
 
