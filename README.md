@@ -11,6 +11,7 @@
 >6. [RestTemplate demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/restclient)
 >7. [aysnc demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/aysnc)
 >8. [stream demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/steam)
-			      
+>9. [HttpClient demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/httpclient)
+	
 
 
