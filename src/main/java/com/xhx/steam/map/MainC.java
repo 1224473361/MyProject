@@ -29,6 +29,8 @@ public class MainC {
 			return b + "[]pp";
 		});
 		m.forEach((a, b) -> System.out.println(a + "---" + b));
+		// 获取key对应的值，若没有采用默认值
+		System.out.println("==========" + m.getOrDefault("d", "12321"));
 	}
 
 	public static Object getObject(Object o) {
