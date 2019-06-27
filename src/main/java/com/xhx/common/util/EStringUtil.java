@@ -74,7 +74,7 @@ public class EStringUtil {
 	 */
 	public static String getStringByObjectAndDefault(Object o, String defaultv) {
 		if (stringIsNull(o)) {
-			return null;
+			return defaultv;
 		}
 		return o.toString();
 	}

@@ -22,7 +22,7 @@ public class EFileUtil {
 	 * 在指定目录匹配名称符合条件的文件
 	 * 
 	 * @param dir
-	 * @param fileName
+	 * @param fileName 支持? * 模糊匹配
 	 * @return
 	 */
 	public static List<File> findFiles(String dir, String fileName) {
@@ -88,7 +88,6 @@ public class EFileUtil {
 	 * @return 匹配成功则返回true，否则返回false
 	 * 
 	 */
-
 	private static boolean wildcardMatch(String pattern, String str) {
 		int patternLength = pattern.length();
 		int strLength = str.length();
@@ -120,5 +119,5 @@ public class EFileUtil {
 		}
 		return (strIndex == strLength);
 	}
-
+	
 }
