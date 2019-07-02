@@ -12,6 +12,7 @@
 >7. [aysnc demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/aysnc)
 >8. [stream demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/steam)
 >9. [HttpClient demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/httpclient)
+>10. [自定义注解 demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/annotaion)
 	
 
 
