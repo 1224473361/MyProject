@@ -27,6 +27,7 @@ public class WebLogAcpect {
 	 */
 	@Pointcut("execution(public Object com.xx.*.controller..*.*(..))")
 	public void webLog() {
+		////
 	}
 
 	@AfterReturning(returning = "ret", pointcut = "webLog()")
@@ -34,12 +35,12 @@ public class WebLogAcpect {
 		// 抓取request
 		ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
 		HttpServletRequest request = attributes.getRequest();
-		log.info("URL : {}", request.getRequestURL().toString());
 		return showResult(ret, request, log);
 	}
 
 	private Object showResult(Object ajax, HttpServletRequest request, Logger log) {
 		log.info("result:{}", ajax);
+		log.info("URL : {}", request.getRequestURL());
 		return ajax;
 	}
 }

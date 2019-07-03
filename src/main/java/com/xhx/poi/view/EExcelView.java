@@ -25,27 +25,18 @@ public class EExcelView extends AbstractView {
 	@Override
 	protected void renderMergedOutputModel(Map<String, Object> model, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		OutputStream os = null;
-		try {
-			String filename = (String) model.get("filename");
+		String filename = (String) model.get("filename");
+
+		// 响应信息，弹出文件下载窗口
+		response.setContentType(MediaType.APPLICATION_OCTET_STREAM.toString());
+		response.setHeader("Content-Disposition", "attachment; filename="
+				+ new String(filename.getBytes(StandardCharsets.UTF_8), StandardCharsets.ISO_8859_1));
+		try (OutputStream os = response.getOutputStream();) {
 			Workbook workbook = (Workbook) model.get("workbook");
-			// 响应信息，弹出文件下载窗口
-			response.setContentType(MediaType.APPLICATION_OCTET_STREAM.toString());
-			response.setHeader("Content-Disposition", "attachment; filename="
-					+ new String(filename.getBytes(StandardCharsets.UTF_8), StandardCharsets.ISO_8859_1));
-			os = response.getOutputStream();
 			workbook.write(os);
 		} catch (Exception e) {
 			log.error("导出出错：" + e.getMessage(), e);
-		} finally {
-			try {
-				if (null != os) {
-					os.flush();
-					os.close();
-				}
-			} catch (Exception e) {
-				log.error("导出Excel出错：" + e.getMessage(), e);
-			}
+			throw e;
 		}
 
 	}
