@@ -94,4 +94,14 @@ public class EDateUtil {
 		return newDateStr;
 	}
 
+	/**
+	* date转换为string
+	 * @param dateDate
+	 * @param pattern
+	 * @return
+	 */
+	public static String dateToStr(java.util.Date dateDate, String pattern) {
+		SimpleDateFormat formatter = new SimpleDateFormat(pattern);
+		return formatter.format(dateDate);
+	}
 }
