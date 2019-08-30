@@ -1,12 +1,12 @@
-package com.xhxt.threadpool.impl;
+package com.xhx.threadpool.impl;
 
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 
-import com.xhxt.threadpool.abs.AbstractThreadPool;
-import com.xhxt.threadpool.entity.MyCar;
+import com.xhx.threadpool.abs.AbstractThreadPool;
+import com.xhx.threadpool.entity.MyCar;
 
 import lombok.extern.slf4j.Slf4j;
 

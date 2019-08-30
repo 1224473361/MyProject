@@ -1,12 +1,12 @@
-package com.xhxt.threadpool.test;
+package com.xhx.threadpool.test;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-import com.xhxt.threadpool.entity.MyCar;
-import com.xhxt.threadpool.impl.CreateCarWorkshop;
+import com.xhx.threadpool.entity.MyCar;
+import com.xhx.threadpool.impl.CreateCarWorkshop;
 
 import lombok.extern.slf4j.Slf4j;
 

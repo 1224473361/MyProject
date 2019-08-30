@@ -1,4 +1,4 @@
-package com.xhxt.threadpool.entity;
+package com.xhx.threadpool.entity;
 
 import java.util.Date;
 
