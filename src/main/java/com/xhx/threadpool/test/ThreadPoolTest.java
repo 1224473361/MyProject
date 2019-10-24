@@ -23,13 +23,13 @@ public class ThreadPoolTest {
 	public static void main(String[] args) throws InterruptedException {
 
 		log.info("===================使用线程池创建汽车============================");
-		CreateCarWorkshop carWorkshop = new CreateCarWorkshop(totalCount, 10);
+		CreateCarWorkshop carWorkshop = new CreateCarWorkshop(totalCount, 30);
 		carWorkshop.setMony(123.12321);
 		carWorkshop.setName("起飞");
 		carWorkshop.setType(1);
 		List<MyCar> rlist = carWorkshop.syncStart();
 		log.info("总共生产汽车数：{}", rlist.size());
-		rlist.stream().forEach(System.out::println);
+		//rlist.stream().forEach(System.out::println);
 		log.info("===================普通模式创建汽车============================");
 		List<MyCar> rlist2 = new ArrayList<>(totalCount.intValue());
 		long start = System.currentTimeMillis();
@@ -42,10 +42,10 @@ public class ThreadPoolTest {
 			car.setType(1);
 			car.setName("起飞");
 			rlist2.add(car);
-			//Thread.sleep(1000);
+			Thread.sleep(1000);
 		}
 		long end = System.currentTimeMillis();
-		log.info("耗时-------------------》{}", (end - start) / 1000);
+		log.info("耗时-------------------》{}", (end - start) );
 		log.info("总共生产汽车数：{}", rlist2.size());
 		//rlist2.stream().forEach(System.out::println);
 	}

@@ -4,80 +4,59 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 自定义线程池框架-公共抽象类（基础版）
+ * 自定义线程池框架-公共抽象类(spring版)
  * 
  * @date 2019年8月30日
  * @author lihui
  */
 @Slf4j
-public abstract class AbstractThreadPool<T> {
+public abstract class AbstractThreadPool2<T> {
 
-	/**
-	 * 任务数量
-	 */
-	private Long taskNum = 0l;
-	/**
-	 * 线程数量
-	 */
-	private Integer threadSize = 3;
-	/**
-	 * 任务线程池
-	 */
-	private ExecutorService executorPool = null;
+	private ThreadPoolTaskExecutor executor;
 
-	/**
-	 * 构造方法
-	 * 
-	 * @param taskNum    总任务数量
-	 * @param threadSize 线程数量
-	 */
-	public AbstractThreadPool(Long taskNum, Integer threadSize) {
+	public AbstractThreadPool2(ThreadPoolTaskExecutor executor) {
 		super();
-		this.taskNum = taskNum;
-		if (null != threadSize && threadSize != 0) {
-			this.threadSize = threadSize;
-		}
-		executorPool = Executors.newFixedThreadPool(this.threadSize);
+		this.executor = executor;
 	}
 
 	/**
 	 * 同步执行
 	 * 
-	 * @throws Exception
+	 * @param taskNum 总任务数
+	 * @return
 	 */
-	public List<T> syncStart() {
+	public List<T> syncStart(int taskNum) {
 		log.info("开启线程池框架");
-		if (this.taskNum == 0) {
+		if (taskNum == 0) {
 			log.info("当前任务数量是0,任务终止");
-			return new ArrayList<>(this.taskNum.intValue());
+			return new ArrayList<>(taskNum);
 		}
 
 		long start = System.currentTimeMillis();
 		// 执行任务前
 		this.beforeService();
 		// 返回结果
-		List<T> results = Collections.synchronizedList(new ArrayList<T>(this.taskNum.intValue()));
+		List<T> results = Collections.synchronizedList(new ArrayList<T>(taskNum));
 		// 具体总任务
-		List<Future<T>> futureProcesses = Collections
-				.synchronizedList(new ArrayList<Future<T>>(this.taskNum.intValue()));
+		List<Future<T>> futureProcesses = Collections.synchronizedList(new ArrayList<Future<T>>(taskNum));
 
-		for (int taskIndex = 0; taskIndex < this.taskNum; taskIndex++) {
+		for (int taskIndex = 0; taskIndex < taskNum; taskIndex++) {
 			final int index = taskIndex;
-			Future<T> futureProcess = this.executorPool.submit(new Task(index));
+			Future<T> futureProcess = this.executor.submit(new Task(index));
 			futureProcesses.add(futureProcess);
 		}
 
 		for (Future<T> everyFuture : futureProcesses) {
 			T each = null;
 			try {
-				this.beforeEachService(this.executorPool);
+				this.beforeEachService(this.executor);
 				each = everyFuture.get();
 				this.afterEachService(each);
 				if (null != each) {
@@ -85,14 +64,14 @@ public abstract class AbstractThreadPool<T> {
 				}
 			} catch (InterruptedException e) {
 				Thread.currentThread().interrupt();
-				this.exceptionService(this.executorPool, each, e);
+				this.exceptionService(this.executor, each, e);
 			} catch (Exception e) {
-				this.exceptionService(this.executorPool, each, e);
+				this.exceptionService(this.executor, each, e);
 			}
 		}
-		this.executorPool.shutdown();
+		this.executor.shutdown();
 		// 执行任务后
-		this.afterService(this.executorPool, results);
+		this.afterService(this.executor, results);
 		long end = System.currentTimeMillis();
 		log.info("耗时-------------------》{}", (end - start));
 		log.info("关闭线程池框架");
@@ -102,25 +81,26 @@ public abstract class AbstractThreadPool<T> {
 	/**
 	 * 异步执行
 	 */
-	public void asyncStart() {
-		new Thread(() -> syncStart()).start();
+	public void asyncStart(int taskNum) {
+		new Thread(() -> syncStart(taskNum)).start();
 	}
 
 	/**
 	 * 执行任务前（会占用主线程）
+	 * 
 	 */
 	public abstract void beforeService();
 
 	/**
 	 * 每个任务执行前（会占用主线程，耗时的处理可以放到service里面）
 	 * 
-	 * @param createPool
+	 * @param executor1
 	 * @throws Exception
 	 */
-	public abstract void beforeEachService(ExecutorService createPool) throws Exception;
+	public abstract void beforeEachService(ThreadPoolTaskExecutor executor1) throws Exception;
 
 	/**
-	 * 具体业务 （利用线程池执行，不会占用主线程）
+	 * 具体业务（利用线程池执行，不会占用主线程）
 	 * 
 	 * @param index
 	 * @return
@@ -139,19 +119,19 @@ public abstract class AbstractThreadPool<T> {
 	/**
 	 * 执行任务后（会占用主线程）
 	 * 
-	 * @param createPool
+	 * @param executor2
 	 * @param results
 	 */
-	public abstract void afterService(ExecutorService createPool, List<T> results);
+	public abstract void afterService(ThreadPoolTaskExecutor executor2, List<T> results);
 
 	/**
 	 * 任务异常处理
 	 * 
-	 * @param createPool
+	 * @param executor2
 	 * @param each
 	 * @param ex
 	 */
-	public abstract void exceptionService(ExecutorService createPool, T each, Exception ex);
+	public abstract void exceptionService(ThreadPoolTaskExecutor executor2, T each, Exception ex);
 
 	/**
 	 * 内部类

@@ -25,7 +25,7 @@ public class WebLogAcpect {
 	/**
 	 * 定义切点
 	 */
-	@Pointcut("execution(public Object com.xx.*.controller..*.*(..))")
+	@Pointcut("execution(* com.xx.*.controller..*.*(..))")
 	public void webLog() {
 		////
 	}
