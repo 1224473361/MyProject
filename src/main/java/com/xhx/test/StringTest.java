@@ -24,6 +24,7 @@ public class StringTest {
 		// --------------日期-------------------
 		Calendar c = Calendar.getInstance();
 		System.out.println(String.format("Duke's Birthday: %1$tm %<te,%<tY", c));
+		System.out.println(String.format("Duke's Birthday: %1$tY - %<te - %<tm", c));
 
 	}
 

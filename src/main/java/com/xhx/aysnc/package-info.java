@@ -1,4 +1,4 @@
 /**
- * 线程池-异步 demo
+ * async研究
  */
 package com.xhx.aysnc;

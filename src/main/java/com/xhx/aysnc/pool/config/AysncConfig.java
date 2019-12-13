@@ -1,4 +1,4 @@
-package com.xhx.aysnc.config;
+package com.xhx.aysnc.pool.config;
 
 import java.util.concurrent.Executor;
 
