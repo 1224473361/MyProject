@@ -1,0 +1,9 @@
+.idea/
+.settings/
+.classpath
+.project
+target/
+MyProject.iml
+.mvn/
+logs/
+.factorypath
