@@ -19,3 +19,9 @@
 >14. [基于redisson框架实现分布式锁](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/redisson)
 >15. [使用nio上传文件](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/uploadfile)
 >16. [天气查询](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/weather)
+>17. [算法研究](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/algorithm)
+##### 排序
+- [快速排序]()
+- [冒泡排序]()
+- [堆排序]()
+
