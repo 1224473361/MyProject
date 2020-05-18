@@ -21,7 +21,7 @@
 >16. [天气查询](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/weather)
 >17. [算法研究](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/algorithm)
 ##### 排序
-- [快速排序]()
-- [冒泡排序]()
-- [堆排序]()
-
+- [快速排序](https://github.com/1224473361/MyProject/blob/master/src/main/java/com/xhx/algorithm/sort/QuickSort.java)
+- [冒泡排序](https://github.com/1224473361/MyProject/blob/master/src/main/java/com/xhx/algorithm/sort/BubbleSort.java)
+- [插入排序](https://github.com/1224473361/MyProject/blob/master/src/main/java/com/xhx/algorithm/sort/InsertSort.java)
+- [堆排序](https://github.com/1224473361/MyProject/blob/master/src/main/java/com/xhx/algorithm/sort/HeapSort.java)
