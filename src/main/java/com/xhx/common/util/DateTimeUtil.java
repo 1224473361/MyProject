@@ -27,7 +27,7 @@ public class DateTimeUtil {
 	 * @param localDate
 	 * @return
 	 */
-	public static Date asDate(LocalDate localDate) {
+	public static Date getDateByLocalDate(LocalDate localDate) {
 		return Date.from(localDate.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
 	}
 
@@ -37,8 +37,29 @@ public class DateTimeUtil {
 	 * @param localDateTime
 	 * @return
 	 */
-	public static Date asDate(LocalDateTime localDateTime) {
+	public static Date getDateByLocalDateTime(LocalDateTime localDateTime) {
 		return Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+	}
+
+	/**
+	 * yyyy-MM-dd 转为date
+	 * 
+	 * @param date
+	 * @return
+	 */
+	public static Date getDateByYMDStr(String date) {
+		return getDateByLocalDate(LocalDate.parse(date, FORMAT_YYYY_DD_MM));
+	}
+
+	/**
+	 * yyyy-MM-dd HH:mm:ss 转为date
+	 * 
+	 * @param date
+	 * @return
+	 */
+	public static Date getDateByYMDHMSStr(String date) {
+		LocalDateTime date1 = LocalDateTime.parse(date, FORMAT_YYYY_DD_MM_HH_MM_SS);
+		return getDateByLocalDateTime(date1);
 	}
 
 	/**
@@ -46,38 +67,8 @@ public class DateTimeUtil {
 	 * @param pattern
 	 * @return
 	 */
-	public static String getDateTimeDisplayString(LocalDateTime dateTime, String pattern) {
+	public static String getStrByLocalDateTime(LocalDateTime dateTime, String pattern) {
 		return DateTimeFormatter.ofPattern(pattern).format(dateTime);
-	}
-
-	/**
-	 * 格式 yyyy年MM月dd日 HH:mm:ss
-	 *
-	 * @param dateTime
-	 * @return
-	 */
-	public static String getDateTimeDisplayString(LocalDateTime dateTime) {
-		return getDateTimeDisplayString(dateTime, YYYY_MM_DD_HHMM_Z);
-	}
-
-	/**
-	 * 格式yyyy-MM-dd HH:mm
-	 *
-	 * @param dateTime
-	 * @return
-	 */
-	public static String getDateTimeDisplayString2(LocalDateTime dateTime) {
-		return getDateTimeDisplayString(dateTime, YY_MM_DD_HHMMSS);
-	}
-
-	/**
-	 * 格式yyyy-MM-dd HH:mm
-	 *
-	 * @param dateTime
-	 * @return
-	 */
-	public static String getDateDisplayString(LocalDateTime dateTime) {
-		return getDateTimeDisplayString(dateTime, YY_MM_DD);
 	}
 
 	/**
@@ -87,50 +78,41 @@ public class DateTimeUtil {
 	 * @param date
 	 * @return
 	 */
-	public static String getDateDisplayString(Date date) {
+	public static String getStrByDate(Date date, String pattern) {
 		Instant instant = date.toInstant();
 		ZoneId zoneId = ZoneId.systemDefault();
-		return getDateDisplayString(instant.atZone(zoneId).toLocalDateTime());
+		return getStrByLocalDateTime(instant.atZone(zoneId).toLocalDateTime(), pattern);
 	}
 
-	/**
-	 * yyyy-MM-dd 转为date
-	 * 
-	 * @param date
-	 * @return
-	 */
-	public static Date asDate(String date) {
-		return asDate(LocalDate.parse(date, FORMAT_YYYY_DD_MM));
-	}
-	
 	/**
 	 * yyyy-MM-dd 转为LocalDate
 	 * 
 	 * @param date
 	 * @return
 	 */
-	public static LocalDate asLocalDate(String date) {
+	public static LocalDate getLocalDateByStr(String date) {
 		return LocalDate.parse(date, FORMAT_YYYY_DD_MM);
 	}
 
 	/**
-	 * yyyy-MM-dd HH:mm:ss 转为date
+	 * yyyy-MM-dd 转为LocalDateTime
 	 * 
 	 * @param date
 	 * @return
 	 */
-	public static Date asDateYMDHMS(String date) {
-		LocalDateTime date1 = LocalDateTime.parse(date, FORMAT_YYYY_DD_MM_HH_MM_SS);
-		return asDate(date1);
+	public static LocalDateTime getLocalDateTimeByStr(String date) {
+		return LocalDateTime.parse(date, FORMAT_YYYY_DD_MM_HH_MM_SS);
 	}
 
 	/**
-	 * yyyy-MM-dd 转为date
+	 * 通过字符串获取时间戳
 	 * 
-	 * @param date
+	 * @param time
+	 * @param pattern
 	 * @return
 	 */
-	public static LocalDateTime localDate(String date) {
-		return LocalDateTime.parse(date, FORMAT_YYYY_DD_MM_HH_MM_SS);
+	public static Long getLongByStr(String time, String pattern) {
+		LocalDateTime date1 = LocalDateTime.parse(time, DateTimeFormatter.ofPattern(pattern));
+		return date1.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
 	}
 }
