@@ -1,7 +1,13 @@
 package com.xhx.poi.util;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -17,12 +23,17 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.xhx.poi.handler.ExcelHandler;
+
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * 导出excel工具类
  * 
  * @date 2019年5月30日
  * @author lihui
  */
+@Slf4j
 public class EExcelUtil {
 
 	public static final String PREFIX_XLS = "xls";
@@ -61,7 +72,7 @@ public class EExcelUtil {
 		Workbook wb = null;
 		if (getSuffix(fileName).equals(PREFIX_XLSX)) {
 			if (isBigData) {
-				//这样表示SXSSFWorkbook只会保留200条数据在内存中，其它的数据都会写到磁盘里，这样的话占用的内存就会很少
+				// 这样表示SXSSFWorkbook只会保留200条数据在内存中，其它的数据都会写到磁盘里，这样的话占用的内存就会很少
 				wb = new SXSSFWorkbook(new XSSFWorkbook(), 200);
 			} else {
 				wb = new XSSFWorkbook();
@@ -111,6 +122,113 @@ public class EExcelUtil {
 			}
 		}
 		return wb;
+	}
+
+	/**
+	 * 设置表头
+	 * 
+	 * @param headers
+	 * @param wb
+	 * @param sheet
+	 * @return
+	 */
+	public static Workbook formatHeaders(String[] headers, Workbook wb, Sheet sheet) {
+		// 表头样式
+		CellStyle style = wb.createCellStyle();
+		// 设置为文本
+		DataFormat format = wb.createDataFormat();
+		style.setDataFormat(format.getFormat("@"));
+		// 字体样式
+		Font fontStyle = wb.createFont();
+		fontStyle.setFontName("微软雅黑");
+		fontStyle.setFontHeightInPoints((short) 12);
+		style.setFont(fontStyle);
+		// 默认第一行为表头
+		Row rowFirst = sheet.createRow(0);
+		for (int i = 0; i < headers.length; i++) {
+			Cell cell = rowFirst.createCell(i);
+			// 设置每列的列宽
+			sheet.setColumnWidth(i, 4000);
+			cell.setCellStyle(style);
+			cell.setCellValue(headers[i]);
+		}
+		return wb;
+	}
+
+	/**
+	 * 生成excel并返回给浏览器<br>
+	 * 将excel剥离出去，留下共有部分的逻辑
+	 * 
+	 * @param handler
+	 * @param response
+	 * @param fileName
+	 */
+	public static void doReturnExcel(ExcelHandler handler, HttpServletResponse response, String fileName) {
+		response.reset();
+		try (HSSFWorkbook wb = new HSSFWorkbook(); ServletOutputStream sos = response.getOutputStream();) {
+			handler.getHSSFWorkbook(wb);
+			// 设置返回页面的相关信息
+			response.setCharacterEncoding("utf-8");
+			response.setContentType("multipart/form-data");
+			response.setHeader("Content-Disposition",
+					"filename=\"" + new String(fileName.getBytes("gb2312"), StandardCharsets.ISO_8859_1));
+			wb.write(sos);
+			sos.flush();
+		} catch (Exception e) {
+			log.error(e.getMessage(), e);
+		}
+	}
+
+	/**
+	 * 向本地生成excel
+	 * 
+	 * @param handler
+	 * @param fileName
+	 * @param path
+	 */
+	public static void generateExcelToPath(ExcelHandler handler, String fileName, String path) {
+		File dir = new File(path);
+		if (!dir.exists()) {
+			dir.mkdirs();
+		}
+		File file = new File(path + File.separator + fileName);
+		if (file.exists()) {
+			file.delete();
+		}
+		try (HSSFWorkbook wb = new HSSFWorkbook(); FileOutputStream out = new FileOutputStream(file);) {
+			handler.getHSSFWorkbook(wb);
+			wb.write(out);
+			out.flush();
+		} catch (Exception e) {
+			log.error(e.getMessage(), e);
+		}
+	}
+
+	/**
+	 * 生成excel并以流的方式返回给浏览器
+	 * 
+	 * @param handler
+	 * @param response
+	 * @param fileName
+	 */
+	public static void generateToStream(ExcelHandler handler, HttpServletResponse response, String fileName) {
+		response.reset();
+		try (HSSFWorkbook wb = new HSSFWorkbook(); ServletOutputStream sos = response.getOutputStream();) {
+			handler.getHSSFWorkbook(wb);
+			// 设置返回页面的相关信息
+			response.setCharacterEncoding("utf-8");
+			response.setContentType("application/octet-stream;charset=UTF-8");
+			response.setHeader("Content-Disposition",
+					"filename=\"" + new String(fileName.getBytes("gb2312"), StandardCharsets.ISO_8859_1));
+			response.setHeader("Access-Control-Allow-Origin", "*");
+			// 为了使前台传过来的数组能够解析成java的list
+			response.setHeader("Access-Control-Allow-Headers",
+					"Origin, X-Requested-With, Content-type, Accept, Authorization");
+			wb.write(sos);
+			sos.flush();
+		} catch (Exception e) {
+			log.error(e.getMessage(), e);
+		}
 	}
 
 }
