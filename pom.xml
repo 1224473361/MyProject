@@ -104,6 +104,12 @@
 			<!-- 需要与boot的版本匹配 -->
 			<version>3.11.5</version>
 		</dependency>
+		<!-- hutool -->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>5.1.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
