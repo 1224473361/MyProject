@@ -26,4 +26,4 @@
 - [插入排序](https://github.com/1224473361/MyProject/blob/master/src/main/java/com/xhx/algorithm/sort/InsertSort.java)
 - [堆排序](https://github.com/1224473361/MyProject/blob/master/src/main/java/com/xhx/algorithm/sort/HeapSort.java)
 >18. [全局数据获取](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/contexholder)
->19. [synchronized 研究](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/com.xhx.sync)
+>19. [synchronized 研究](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/sync)
