@@ -1,12 +1,12 @@
-package com.xhx.threadpool.impl;
+package com.xhx.concurrent.threadpool.diy.impl;
 
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 
-import com.xhx.threadpool.abs.AbstractThreadPool;
-import com.xhx.threadpool.entity.MyCar;
+import com.xhx.concurrent.threadpool.diy.abs.AbstractThreadPool;
+import com.xhx.concurrent.threadpool.diy.entity.MyCar;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -65,7 +65,7 @@ public class CreateCarWorkshop extends AbstractThreadPool<MyCar> {
 		car.setNumb(UUID.randomUUID().toString());
 		car.setType(type);
 		car.setName(name);
-		Thread.sleep(1000);
+		Thread.sleep(100);
 		return car;
 	}
 

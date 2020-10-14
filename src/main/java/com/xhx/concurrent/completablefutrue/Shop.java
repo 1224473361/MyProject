@@ -1,4 +1,4 @@
-package com.xhx.completablefutrue;
+package com.xhx.concurrent.completablefutrue;
 
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;

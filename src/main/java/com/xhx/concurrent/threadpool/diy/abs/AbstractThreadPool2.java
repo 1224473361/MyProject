@@ -1,4 +1,4 @@
-package com.xhx.threadpool.abs;
+package com.xhx.concurrent.threadpool.diy.abs;
 
 import java.util.ArrayList;
 import java.util.Collections;
