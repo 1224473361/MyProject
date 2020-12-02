@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 
  * @date 2019年7月2日
- * @author lihui
+ * @author xhx
  */
 @Slf4j
 public class MyCglibInterceptor implements MethodInterceptor {

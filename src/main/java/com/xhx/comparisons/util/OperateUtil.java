@@ -11,7 +11,7 @@ import com.xhx.comparisons.adapter.OperaterAdapter;
  * 运算符-工具类
  * 
  * @date 2019年5月23日
- * @author lihui
+ * @author xhx
  */
 public class OperateUtil {
 

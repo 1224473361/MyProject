@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * 气象vo
  * 
- * @author lihui
+ * @author xhx
  * @date 2020年5月13日
  *
  */

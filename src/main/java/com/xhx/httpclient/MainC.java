@@ -9,7 +9,7 @@ import org.apache.http.message.BasicNameValuePair;
 /**
  * 
  * @date 2019年6月24日
- * @author lihui
+ * @author xhx
  */
 public class MainC {
 

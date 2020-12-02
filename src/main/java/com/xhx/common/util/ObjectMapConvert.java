@@ -9,7 +9,7 @@ import org.springframework.cglib.beans.BeanMap;
  * 对象和map互转
  * 
  * @date 2019年6月27日
- * @author lihui
+ * @author xhx
  */
 public class ObjectMapConvert {
 

@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.extension.activerecord.Model;
  * 演示实体父类
  * 
  * @date 2019年6月12日
- * @author lihui
+ * @author xhx
  */
 @SuppressWarnings("rawtypes")
 @KeySequence("OA_PUBLIC_SEQ")//类注解

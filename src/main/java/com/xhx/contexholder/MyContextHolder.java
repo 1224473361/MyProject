@@ -7,7 +7,7 @@ import com.xhx.contexholder.strategy.ThreadLocalContextStrategy;
 /**
  * 参数获取静态类
  * 
- * @author lihui
+ * @author xhx
  * @date 2020年8月18日
  *
  */

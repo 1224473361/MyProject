@@ -6,7 +6,7 @@ import com.xhx.comparisons.inter.OperateInterface;
 /**
  * 日期比较类-暂未完善
  * @date 2019年5月23日
- * @author lihui
+ * @author xhx
  */
 public class DateOperate implements OperateInterface {
 

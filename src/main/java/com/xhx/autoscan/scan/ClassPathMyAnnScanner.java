@@ -16,7 +16,7 @@ import com.xhx.autoscan.fac.MyAnnProxyFactory;
 /**
  * 
  * @date 2019年9月2日
- * @author lihui
+ * @author xhx
  */
 public class ClassPathMyAnnScanner extends ClassPathBeanDefinitionScanner {
 

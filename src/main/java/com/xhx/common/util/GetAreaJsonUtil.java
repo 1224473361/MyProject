@@ -22,7 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 获取省市区json
  * 
- * @author lihui
+ * @author xhx
  * @date 2020年8月20日
  *
  */

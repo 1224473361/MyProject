@@ -12,7 +12,7 @@ import com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor;
 /**
  * 
  * @date 2019年6月12日
- * @author lihui
+ * @author xhx
  */
 @Configuration
 //@MapperScan("com.mybatistest.mapper*")

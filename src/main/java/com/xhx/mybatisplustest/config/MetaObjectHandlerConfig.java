@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 /**
  * 
  * @date 2019年6月12日
- * @author lihui
+ * @author xhx
  */
 public class MetaObjectHandlerConfig implements MetaObjectHandler {
 

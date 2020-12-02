@@ -13,7 +13,7 @@ import com.xhx.mybatisplustest.service.IUserService;
 /**
  * 
  * @date 2019年6月12日
- * @author lihui
+ * @author xhx
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {

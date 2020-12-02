@@ -4,7 +4,7 @@ package com.xhx.comparisons.constant;
  * 运算符
  * 
  * @date 2019年5月23日
- * @author lihui
+ * @author xhx
  */
 public enum OperatorType {
 

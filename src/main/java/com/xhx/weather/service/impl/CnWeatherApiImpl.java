@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 使用气象局提供的接口
  * 
- * @author lihui
+ * @author xhx
  * @date 2020年5月13日
  *
  */

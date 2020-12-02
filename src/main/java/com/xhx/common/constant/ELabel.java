@@ -4,7 +4,7 @@ package com.xhx.common.constant;
  * 定义各种标签
  * 
  * @date 2019年6月14日
- * @author lihui
+ * @author xhx
  */
 public class ELabel {
 

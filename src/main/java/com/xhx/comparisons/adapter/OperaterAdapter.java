@@ -16,7 +16,7 @@ import com.xhx.comparisons.inter.impl.StringDecimalOperate;
  * 适配器
  * 
  * @date 2019年5月23日
- * @author lihui
+ * @author xhx
  */
 public class OperaterAdapter {
 

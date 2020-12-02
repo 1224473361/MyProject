@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.api.IErrorCode;
 /**
  * 
  * @date 2019年6月12日
- * @author lihui
+ * @author xhx
  */
 public enum ErrorCode implements IErrorCode {
 	TEST(1000, "测试错误编码");

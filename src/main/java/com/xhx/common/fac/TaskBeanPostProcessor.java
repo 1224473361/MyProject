@@ -10,7 +10,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
  * 在bean初始化完后将bean存入工厂内
  * 
  * @date 2019年8月21日
- * @author lihui
+ * @author xhx
  */
 //@Component
 public class TaskBeanPostProcessor implements BeanPostProcessor {

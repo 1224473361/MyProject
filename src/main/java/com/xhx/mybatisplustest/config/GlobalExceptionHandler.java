@@ -21,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
  * 全局rest异常处理
  * 
  * @date 2019年6月12日
- * @author lihui
+ * @author xhx
  */
 @RestController
 @Slf4j

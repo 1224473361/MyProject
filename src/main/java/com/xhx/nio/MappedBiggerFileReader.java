@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
  * 使用nio MappedByteBuffer读取大文件，但是无法按行处理
  * 
  * @date 2019年8月23日
- * @author lihui
+ * @author xhx
  */
 @Data
 @Slf4j

@@ -15,7 +15,7 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
  * mybatis-plus代码生成器
  * 
  * @date 2019年6月12日
- * @author lihui
+ * @author xhx
  */
 public class MpGenerate {
 

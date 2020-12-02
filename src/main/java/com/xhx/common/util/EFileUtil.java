@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  * 文件寻找（支持tomcat启动）
  * 
  * @date 2019年6月19日
- * @author lihui
+ * @author xhx
  */
 public class EFileUtil {
 

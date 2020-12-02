@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * 城市天气查询实体
  * 
- * @author lihui
+ * @author xhx
  * @date 2020年5月13日
  *
  */

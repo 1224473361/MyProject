@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
  * 自定义注解
  * 
  * @date 2019年7月2日
- * @author lihui
+ * @author xhx
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

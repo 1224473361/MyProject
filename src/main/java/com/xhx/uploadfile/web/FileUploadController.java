@@ -21,7 +21,7 @@ import com.xhx.uploadfile.vo.Result;
 import com.xhx.uploadfile.vo.UploadFile;
 
 /**
- * @author lihui
+ * @author xhx
  * @date 2020年5月6日
  *
  */

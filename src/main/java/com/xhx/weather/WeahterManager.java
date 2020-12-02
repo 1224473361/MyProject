@@ -11,7 +11,7 @@ import com.xhx.weather.vo.CityWeatherVo;
 /**
  * 天气获取
  * 
- * @author lihui
+ * @author xhx
  * @date 2020年5月12日
  *
  */

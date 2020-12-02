@@ -4,7 +4,7 @@ package com.xhx.comparisons.inter;
  * 比较接口
  * 
  * @date 2019年5月23日
- * @author lihui
+ * @author xhx
  */
 public interface OperateInterface {
 

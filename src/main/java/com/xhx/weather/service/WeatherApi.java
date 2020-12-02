@@ -6,7 +6,7 @@ import com.xhx.weather.vo.CityWeatherVo;
 /**
  * 天气接口
  * 
- * @author lihui
+ * @author xhx
  * @date 2020年5月13日
  *
  */

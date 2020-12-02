@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
  * 模拟http请求
  * 
  * @date 2019年5月23日
- * @author lihui
+ * @author xhx
  */
 @Service
 @Slf4j

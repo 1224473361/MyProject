@@ -31,7 +31,7 @@ import lombok.extern.slf4j.Slf4j;
  * 导出excel工具类
  * 
  * @date 2019年5月30日
- * @author lihui
+ * @author xhx
  */
 @Slf4j
 public class EExcelUtil {

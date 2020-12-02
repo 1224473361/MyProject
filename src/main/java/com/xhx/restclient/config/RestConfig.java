@@ -20,7 +20,7 @@ import org.springframework.web.client.RestTemplate;
  * 注册resttemplate
  * 
  * @date 2019年5月23日
- * @author lihui
+ * @author xhx
  */
 @Configuration
 public class RestConfig {

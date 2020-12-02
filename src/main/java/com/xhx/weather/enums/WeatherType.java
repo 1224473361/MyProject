@@ -3,7 +3,7 @@ package com.xhx.weather.enums;
 /**
  * 天气类型
  * 
- * @author lihui
+ * @author xhx
  * @date 2020年5月12日
  *
  */

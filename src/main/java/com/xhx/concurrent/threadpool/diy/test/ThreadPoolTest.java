@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 
  * @date 2019年8月30日
- * @author lihui
+ * @author xhx
  */
 @Slf4j
 public class ThreadPoolTest {

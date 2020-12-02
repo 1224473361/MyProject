@@ -15,7 +15,7 @@ import org.springframework.util.PathMatcher;
  * 利用spring提供的工具类查询文件
  * 
  * @date 2019年7月2日
- * @author lihui
+ * @author xhx
  */
 public class SpringFileSearchUtil {
 

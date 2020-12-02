@@ -5,7 +5,7 @@ import com.xhx.annotaion.annotaion.MyAnn;
 /**
  * 
  * @date 2019年7月2日
- * @author lihui
+ * @author xhx
  */
 public interface MyInter {
 

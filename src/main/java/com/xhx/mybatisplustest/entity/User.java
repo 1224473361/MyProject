@@ -12,7 +12,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 /**
  * 
  * @date 2019年6月12日
- * @author lihui
+ * @author xhx
  */
 @SuppressWarnings("serial")
 @TableName(value = "MUSER")

@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
  * 获取用户访问ip
  * 
  * @date 2019年6月26日
- * @author lihui
+ * @author xhx
  */
 @Slf4j
 public class GetUserIp {

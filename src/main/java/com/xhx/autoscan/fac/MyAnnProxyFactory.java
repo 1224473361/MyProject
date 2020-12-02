@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 
  * @date 2019年9月2日
- * @author lihui
+ * @author xhx
  */
 @Slf4j
 public class MyAnnProxyFactory implements FactoryBean<Object> {

@@ -18,7 +18,7 @@ import com.xhx.weather.vo.CityWeatherVo;
 /**
  * 气象获取工具类-使用sojson的api接口
  * 
- * @author lihui
+ * @author xhx
  * @date 2020年5月13日
  *
  */

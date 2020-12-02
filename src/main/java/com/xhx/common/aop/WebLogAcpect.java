@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
  * 利用aop打印controller返回日志
  * 
  * @date 2019年5月31日
- * @author lihui
+ * @author xhx
  */
 @Aspect
 // @Component

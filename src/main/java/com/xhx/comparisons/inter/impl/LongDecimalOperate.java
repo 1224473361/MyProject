@@ -5,7 +5,7 @@ import com.xhx.comparisons.inter.OperateInterface;
  * long比较类
  * 
  * @date 2019年5月23日
- * @author lihui
+ * @author xhx
  */
 public class LongDecimalOperate implements OperateInterface {
 

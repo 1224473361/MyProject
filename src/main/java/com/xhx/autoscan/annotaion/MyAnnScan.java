@@ -14,7 +14,7 @@ import com.xhx.autoscan.scan.MyAnnoScannerRegistrar;
  * 自动扫描MyAnno接口
  * 
  * @date 2019年9月2日
- * @author lihui
+ * @author xhx
  */
 @Import(MyAnnoScannerRegistrar.class)
 @Target({ ElementType.TYPE })

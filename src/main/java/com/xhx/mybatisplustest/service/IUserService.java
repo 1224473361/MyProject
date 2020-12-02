@@ -9,7 +9,7 @@ import com.xhx.mybatisplustest.entity.User;
 /**
  * 
  * @date 2019年6月12日
- * @author lihui
+ * @author xhx
  */
 public interface IUserService extends IService<User> {
 

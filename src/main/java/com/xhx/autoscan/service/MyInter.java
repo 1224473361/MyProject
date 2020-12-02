@@ -6,7 +6,7 @@ import com.xhx.autoscan.annotaion.MyAnnMethod;
 /**
  * 
  * @date 2019年7月2日
- * @author lihui
+ * @author xhx
  */
 @MyAnn
 public interface MyInter {

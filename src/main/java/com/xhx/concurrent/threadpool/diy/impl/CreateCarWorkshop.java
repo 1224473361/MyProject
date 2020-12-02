@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
  * 利用线程池生产汽车
  * 
  * @date 2019年8月30日
- * @author lihui
+ * @author xhx
  */
 @Slf4j
 public class CreateCarWorkshop extends AbstractThreadPool<MyCar> {

@@ -9,7 +9,7 @@ import lombok.ToString;
  * 车 实体
  * 
  * @date 2019年8月30日
- * @author lihui
+ * @author xhx
  */
 @Data
 @ToString

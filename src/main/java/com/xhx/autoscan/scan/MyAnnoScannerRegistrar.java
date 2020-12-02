@@ -18,7 +18,7 @@ import com.xhx.autoscan.annotaion.MyAnnScan;
 /**
  * 
  * @date 2019年9月2日
- * @author lihui
+ * @author xhx
  */
 public class MyAnnoScannerRegistrar implements ImportBeanDefinitionRegistrar, ResourceLoaderAware {
 

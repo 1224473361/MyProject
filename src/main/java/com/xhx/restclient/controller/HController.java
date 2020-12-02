@@ -9,7 +9,7 @@ import com.xhx.restclient.service.MenuSendService;
 /**
  * 
  * @date 2019年5月23日
- * @author lihui
+ * @author xhx
  */
 @RestController
 public class HController {

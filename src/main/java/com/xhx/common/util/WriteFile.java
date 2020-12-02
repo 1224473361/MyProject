@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * 
  * @date 2019年7月23日
- * @author lihui
+ * @author xhx
  */
 public class WriteFile {
 

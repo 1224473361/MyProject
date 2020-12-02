@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
  * 自定义线程池框架-公共抽象类(spring版)
  * 
  * @date 2019年8月30日
- * @author lihui
+ * @author xhx
  */
 @Slf4j
 public abstract class AbstractThreadPool2<T> {
@@ -137,7 +137,7 @@ public abstract class AbstractThreadPool2<T> {
 	 * 内部类
 	 * 
 	 * @date 2019年8月30日
-	 * @author lihui
+	 * @author xhx
 	 */
 	private class Task implements Callable<T> {
 		private final Integer index;

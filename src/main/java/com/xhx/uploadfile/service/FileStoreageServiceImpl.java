@@ -16,7 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author lihui
+ * @author xhx
  * @date 2020年5月6日
  *
  */

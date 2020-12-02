@@ -16,7 +16,7 @@ import com.xhx.autoscan.service.MyInter2;
 /**
  * 
  * @date 2019年9月2日
- * @author lihui
+ * @author xhx
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

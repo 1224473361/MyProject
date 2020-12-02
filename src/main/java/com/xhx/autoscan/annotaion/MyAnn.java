@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  * 标识为要扫描的类
  * 
  * @date 2019年9月2日
- * @author lihui
+ * @author xhx
  */
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)

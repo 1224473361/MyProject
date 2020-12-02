@@ -4,7 +4,7 @@ package com.xhx.common.fac;
  * 工厂模式，可动态获取指定文件夹中的所有实现类
  * 
  * @date 2019年6月3日
- * @author lihui
+ * @author xhx
  */
 //@Component
 public class TaskDealFactory {

@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
  * 导出excel视图(用于控制excel浏览器下载)
  * 
  * @date 2019年5月30日
- * @author lihui
+ * @author xhx
  */
 @Slf4j
 public class EExcelView extends AbstractView {

@@ -5,7 +5,7 @@ import java.util.Calendar;
 /**
  * 
  * @date 2019年8月26日
- * @author lihui
+ * @author xhx
  */
 public class StringTest {
 	public static void main(String[] args) {

@@ -13,7 +13,7 @@ import com.xhx.mybatisplustest.superm.SuperMapper;
 /**
  * 
  * @date 2019年6月12日
- * @author lihui
+ * @author xhx
  */
 @Mapper
 public interface UserMapper extends SuperMapper<User> {
