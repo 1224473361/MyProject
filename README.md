@@ -10,7 +10,7 @@
 >5. [poi](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/poi)
 >6. [RestTemplate demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/restclient)
 >7. [aysnc demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/aysnc)
->8. [stream demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/steam)
+>8. [jdk1.8 stream流、函数式开发研究](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/steam)
 >9. [HttpClient demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/httpclient)
 >10. [自定义注解 demo](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/annotaion)
 >11. [测试](https://github.com/1224473361/MyProject/tree/master/src/main/java/com/xhx/test)
