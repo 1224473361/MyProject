@@ -1,4 +1,4 @@
-package com.xhx.mathc;
+package com.xhx.test.print;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -6,7 +6,11 @@ import java.util.List;
 
 import org.assertj.core.util.Lists;
 
-public class MathC {
+/**
+ * 打印数字三角
+ *
+ */
+public class PrintTriangle {
 
 	public static void main(String[] args) {
 		int d = 10;

@@ -1,4 +1,4 @@
-package com.xhx.test;
+package com.xhx.test.string;
 
 import java.util.Calendar;
 
