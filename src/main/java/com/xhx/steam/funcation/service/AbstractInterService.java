@@ -2,7 +2,7 @@ package com.xhx.steam.funcation.service;
 
 import java.util.Map;
 
-import com.thpower.common.vo.R;
+import com.xhx.common.entity.R;
 import com.xhx.steam.funcation.func.MyFuncation;
 
 import lombok.extern.slf4j.Slf4j;

@@ -3,7 +3,7 @@ package com.xhx.steam.funcation;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.thpower.common.vo.R;
+import com.xhx.common.entity.R;
 import com.xhx.steam.funcation.service.impl.GetDoubleServiceImpl;
 import com.xhx.steam.funcation.service.impl.GetIntegerServiceImpl;
 import com.xhx.steam.funcation.service.impl.GetStringServiceImpl;

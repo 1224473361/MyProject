@@ -1,36 +1,42 @@
-package com.thpower.common.vo;
-
-import lombok.Data;
+package com.xhx.common.entity;
 
 /**
- * 返回结果集
- * 
+ * RESTful结果返回实体
  */
-@Data
 public class R<T> {
 
-	/**
-	 * 返回结果码
-	 */
 	private Integer code;
-	/**
-	 * 返回错误描述
-	 */
 	private String message;
-	/**
-	 * 返回结果
-	 */
 	private T data;
-
-	/**
-	 * 成功的code
-	 */
-	private static final Integer CODE_SUCCESS = 0;
 
 	/**
 	 * 成功的message
 	 */
-	private static final String MESSAGE_SUCCESS = "成功";
+	public static final String MESSAGE_SUCCESS = RCode.SUCCESS.getMsg();
+
+	public Integer getCode() {
+		return code;
+	}
+
+	public void setCode(Integer code) {
+		this.code = code;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public T getData() {
+		return data;
+	}
+
+	public void setData(T data) {
+		this.data = data;
+	}
 
 	public R(Integer code, String message, T data) {
 		super();
@@ -45,7 +51,7 @@ public class R<T> {
 	 * @return
 	 */
 	public boolean isSuccess() {
-		return this.code.equals(CODE_SUCCESS);
+		return this.code.equals(RCode.SUCCESS.getCode());
 	}
 
 	public R() {
@@ -88,12 +94,22 @@ public class R<T> {
 	 * 封装失败返回
 	 * 
 	 * @param code
-	 * @param message
-	 * @param data
+	 * @param msg
 	 * @return
 	 */
-	public static <T> R<T> fail(Integer code, String message) {
-		return fail(code, message, null);
+	public static <T> R<T> fail(RCode code, String msg) {
+		return fail(code.getCode(), msg, null);
+	}
+
+	/**
+	 * 封装失败返回
+	 * 
+	 * @param code
+	 * @param msg
+	 * @return
+	 */
+	public static <T> R<T> fail(RCode code) {
+		return fail(code, code.getMsg());
 	}
 
 	/**
@@ -106,4 +122,10 @@ public class R<T> {
 	public static <T> R<T> fail(R<?> r) {
 		return fail(r.getCode(), r.getMessage(), null);
 	}
+
+	@Override
+	public String toString() {
+		return "R [code=" + code + ", message=" + message + ", data=" + data + "]";
+	}
+
 }

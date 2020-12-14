@@ -2,7 +2,7 @@ package com.xhx.steam.funcation.service;
 
 import java.util.Map;
 
-import com.thpower.common.vo.R;
+import com.xhx.common.entity.R;
 
 /**
  * 获取map中的结果
