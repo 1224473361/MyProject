@@ -1,8 +1,10 @@
 package com.xhx.steam.io;
 
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -10,12 +12,55 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
+
+import org.apache.http.impl.conn.Wire;
 
 public class IODdemo {
 
 	public static void main(String[] args) throws IOException {
-		writeByteFile();
-		readByteFile();
+		readZipFile();
+	}
+
+	/**
+	 * 读取zip
+	 */
+	public static void readZipFile() {
+		String zipPath = "F:\\data.zip";
+		String dir = "F:\\tmp";
+		try (ZipInputStream zis = new ZipInputStream(new FileInputStream(zipPath));) {
+			ZipEntry entry;
+			while ((entry = zis.getNextEntry()) != null) {
+				String name = entry.getName();
+				System.out.println(name);
+				File newFile = new File(dir + File.separator + name);
+				doDecomperssFile(newFile, zis);
+				zis.closeEntry();
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 从zip中复复制文件出来
+	 * 
+	 * @param f
+	 * @param zis
+	 */
+	private static void doDecomperssFile(File f, ZipInputStream zis) {
+		try (BufferedOutputStream os = new BufferedOutputStream(new FileOutputStream(f));) {
+			int len;
+			byte[] barr = new byte[1024];
+			while ((len = zis.read(barr, 0, 1024)) != -1) {
+				os.write(barr, 0, 1024);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
