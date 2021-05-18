@@ -18,6 +18,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<mybatis-plus-boot-starter.version>3.1.0</mybatis-plus-boot-starter.version>
+		<easypoi.version>4.0.0</easypoi.version>
 	</properties>
 
 	<dependencies>
@@ -109,6 +110,12 @@
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
 			<version>5.1.1</version>
+		</dependency>
+		<!-- easypoi组件 -->
+		<dependency>
+			<groupId>cn.afterturn</groupId>
+			<artifactId>easypoi-spring-boot-starter</artifactId>
+			<version>${easypoi.version}</version>
 		</dependency>
 	</dependencies>
 

@@ -1,10 +1,6 @@
 package com.xhx.common.util;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.util.Iterator;
-import java.util.Set;
-import java.util.Map.Entry;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -16,7 +12,6 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
 import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.io.IoUtil;
 import lombok.extern.slf4j.Slf4j;
 
 /**
